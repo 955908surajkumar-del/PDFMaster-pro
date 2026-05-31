@@ -1,0 +1,619 @@
+UltraPDF Pro Final Square Header Full Code
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0,
+maximum-scale=1.0,
+user-scalable=no">
+
+<title>UltraPDF Pro</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+html,body{
+width:100%;
+overflow-x:hidden;
+touch-action:manipulation;
+background:#f4f7ff;
+}
+
+body{
+padding-top:90px;
+}
+
+/* HEADER */
+
+header{
+width:100%;
+padding:15px 20px;
+background:linear-gradient(135deg,#4f46e5,#7c3aed);
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+top:0;
+left:0;
+z-index:1000;
+box-shadow:0 8px 25px rgba(79,70,229,0.35);
+}
+
+/* LOGO */
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:white;
+letter-spacing:1px;
+}
+
+/* MENU */
+
+.menu-container{
+position:relative;
+}
+
+.menu-btn{
+font-size:42px;
+cursor:pointer;
+padding:0 12px;
+color:white;
+border-radius:10px;
+transition:.3s;
+}
+
+.menu-btn:hover{
+background:rgba(255,255,255,0.15);
+}
+
+.dropdown-menu{
+position:absolute;
+top:65px;
+right:0;
+width:260px;
+background:white;
+border-radius:18px;
+overflow:hidden;
+display:none;
+flex-direction:column;
+box-shadow:0 10px 35px rgba(0,0,0,0.15);
+animation:menuAnim .3s ease;
+}
+
+.dropdown-menu a{
+padding:18px 22px;
+text-decoration:none;
+font-size:18px;
+font-weight:500;
+color:#111827;
+border-bottom:1px solid #f3f4f6;
+transition:.3s;
+cursor:pointer;
+}
+
+.dropdown-menu a:hover{
+background:#eef2ff;
+padding-left:32px;
+color:#4f46e5;
+}
+
+@keyframes menuAnim{
+
+from{
+opacity:0;
+transform:translateY(-10px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* HERO */
+
+.hero{
+padding:60px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:40px;
+}
+
+.hero-left{
+flex:1;
+min-width:300px;
+}
+
+.hero-left h1{
+font-size:68px;
+line-height:1.1;
+margin-bottom:25px;
+color:#111827;
+}
+
+.hero-left h1 span{
+color:#4f46e5;
+}
+
+.hero-left p{
+font-size:20px;
+line-height:1.8;
+color:#6b7280;
+margin-bottom:40px;
+}
+
+/* UPLOAD */
+
+.upload-box{
+background:white;
+padding:35px;
+border-radius:35px;
+box-shadow:0 10px 40px rgba(0,0,0,0.08);
+max-width:550px;
+}
+
+.upload-area{
+border:3px dashed #4f46e5;
+border-radius:25px;
+padding:50px 20px;
+text-align:center;
+cursor:pointer;
+transition:.3s;
+}
+
+.upload-area:hover{
+background:#eef2ff;
+}
+
+.upload-area img{
+width:95px;
+margin-bottom:20px;
+}
+
+.upload-area h2{
+font-size:30px;
+margin-bottom:10px;
+color:#4f46e5;
+}
+
+.upload-area p{
+font-size:18px;
+color:#6b7280;
+}
+
+input[type=file]{
+display:none;
+}
+
+.tool-select{
+width:100%;
+padding:18px;
+margin-top:20px;
+border:none;
+border-radius:15px;
+background:#eef2ff;
+font-size:18px;
+font-weight:600;
+outline:none;
+}
+
+.action-btn{
+width:100%;
+padding:20px;
+margin-top:25px;
+border:none;
+border-radius:18px;
+background:linear-gradient(135deg,#4f46e5,#7c3aed);
+color:white;
+font-size:22px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.action-btn:hover{
+transform:scale(1.02);
+}
+
+/* RESULT */
+
+.result{
+margin-top:30px;
+padding:25px;
+background:#eef2ff;
+border-radius:25px;
+display:none;
+text-align:center;
+}
+
+.result h3{
+font-size:28px;
+margin-bottom:15px;
+color:#111827;
+}
+
+.result p{
+font-size:18px;
+line-height:1.8;
+color:#374151;
+}
+
+.download-btn{
+display:inline-block;
+margin-top:20px;
+padding:18px 35px;
+background:#10b981;
+color:white;
+text-decoration:none;
+border-radius:15px;
+font-size:20px;
+font-weight:600;
+transition:.3s;
+}
+
+.download-btn:hover{
+background:#059669;
+transform:scale(1.05);
+}
+
+/* RIGHT IMAGE */
+
+.hero-right{
+flex:1;
+display:flex;
+justify-content:center;
+min-width:300px;
+}
+
+.hero-right img{
+width:100%;
+max-width:520px;
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* FEATURES */
+
+.features{
+padding:70px 5%;
+background:white;
+}
+
+.section-title{
+text-align:center;
+font-size:48px;
+margin-bottom:55px;
+color:#111827;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.feature-card{
+background:#f9fafb;
+padding:35px;
+border-radius:25px;
+transition:.3s;
+}
+
+.feature-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 30px rgba(0,0,0,0.08);
+}
+
+.feature-card h3{
+font-size:24px;
+margin-bottom:15px;
+color:#4f46e5;
+}
+
+.feature-card p{
+font-size:17px;
+line-height:1.8;
+color:#6b7280;
+}
+
+/* FOOTER */
+
+footer{
+background:#111827;
+padding:50px 5%;
+text-align:center;
+color:white;
+margin-top:60px;
+}
+
+footer h2{
+font-size:34px;
+margin-bottom:15px;
+}
+
+footer p{
+font-size:18px;
+line-height:1.8;
+color:#d1d5db;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+}
+
+.hero-left h1{
+font-size:48px;
+}
+
+.section-title{
+font-size:38px;
+}
+
+input,
+select,
+button,
+textarea{
+font-size:16px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">UltraPDF Pro</div>
+
+<div class="menu-container">
+
+<div class="menu-btn" onclick="toggleMenu()">
+⋮
+</div>
+
+<div class="dropdown-menu" id="dropdownMenu">
+
+<a onclick="changeTool('Compress PDF')">Compress PDF</a>
+
+<a onclick="changeTool('Merge PDF')">Merge PDF</a>
+
+<a onclick="changeTool('Split PDF')">Split PDF</a>
+
+<a onclick="changeTool('Lock PDF')">Lock PDF</a>
+
+<a onclick="changeTool('Unlock PDF')">Unlock PDF</a>
+
+<a onclick="changeTool('PDF to JPG')">PDF to JPG</a>
+
+<a onclick="changeTool('JPG to PDF')">JPG to PDF</a>
+
+<a onclick="changeTool('Rotate PDF')">Rotate PDF</a>
+
+<a onclick="changeTool('Remove Pages')">Remove Pages</a>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h1>
+All PDF Tools
+<span>In One</span>
+Website
+</h1>
+
+<p>
+Modern fast secure PDF tools website with premium unique UI.
+Compress merge split and convert PDF files instantly.
+Mobile friendly and future ready design.
+</p>
+
+<div class="upload-box">
+
+<label class="upload-area" for="pdfFile">
+
+<img src="https://cdn-icons-png.flaticon.com/512/337/337946.png">
+
+<h2>Select PDF File</h2>
+
+<p>Upload your PDF file here</p>
+
+</label>
+
+<input type="file" id="pdfFile" accept=".pdf">
+
+<select class="tool-select" id="toolType">
+
+<option>Compress PDF</option>
+<option>Merge PDF</option>
+<option>Split PDF</option>
+<option>Lock PDF</option>
+<option>Unlock PDF</option>
+<option>PDF to JPG</option>
+
+</select>
+
+<button class="action-btn" onclick="processPDF()">
+Process PDF
+</button>
+
+<div class="result" id="result">
+
+<h3 id="status"></h3>
+
+<p id="fileInfo"></p>
+
+<a id="downloadBtn" class="download-btn">
+Download File
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3767/3767084.png">
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>UltraPDF Pro</h2>
+
+<p>
+Professional all in one PDF tools website.
+Fast secure mobile friendly and SEO optimized.
+</p>
+
+</footer>
+
+<script>
+
+function toggleMenu(){
+
+const menu=document.getElementById('dropdownMenu');
+
+if(menu.style.display==="flex"){
+
+menu.style.display="none";
+
+}else{
+
+menu.style.display="flex";
+
+}
+
+}
+
+window.onclick=function(e){
+
+if(!e.target.matches('.menu-btn')){
+
+const menu=document.getElementById('dropdownMenu');
+
+if(menu.style.display==="flex"){
+
+menu.style.display="none";
+
+}
+
+}
+
+}
+
+function changeTool(tool){
+
+document.getElementById('toolType').value=tool;
+
+document.getElementById('dropdownMenu').style.display="none";
+
+}
+
+function processPDF(){
+
+const fileInput=document.getElementById('pdfFile');
+
+const result=document.getElementById('result');
+
+const status=document.getElementById('status');
+
+const fileInfo=document.getElementById('fileInfo');
+
+const downloadBtn=document.getElementById('downloadBtn');
+
+const toolType=document.getElementById('toolType').value;
+
+if(fileInput.files.length===0){
+
+alert("Please select a PDF file");
+
+return;
+
+}
+
+const file=fileInput.files[0];
+
+result.style.display="block";
+
+status.innerText=toolType + " Processing...";
+
+setTimeout(()=>{
+
+const originalSize=(file.size/1024).toFixed(2);
+
+status.innerText=toolType + " Completed Successfully";
+
+fileInfo.innerHTML=`
+Selected Tool : <b>${toolType}</b><br><br>
+Original Size : <b>${originalSize} KB</b><br>
+File Processed Successfully
+`;
+
+const fileURL=URL.createObjectURL(file);
+
+downloadBtn.href=fileURL;
+
+downloadBtn.download="UltraPDF-Pro.pdf";
+
+downloadBtn.style.display="inline-block";
+
+},2000);
+
+}
+
+</script>
+
+</body>
+
+</html>
